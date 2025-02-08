@@ -16,13 +16,14 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
+import java.lang.reflect.Type
 
 
 abstract class ApplicationDataStore<T>(
     @ApplicationContext private val context: Context,
     private val moshi: Moshi,
     private val key: Preferences.Key<String>,
-    private val type: Class<T>,
+    private val type: Type,
     private val defaultValue: T,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
     fileName: String
@@ -33,12 +34,12 @@ abstract class ApplicationDataStore<T>(
     private val mutex = Mutex()
 
     private fun serialize(value: T): String {
-        val jsonAdapter = moshi.adapter(type)
+        val jsonAdapter = moshi.adapter<T>(type)
         return jsonAdapter.toJson(value)
     }
 
     private fun deserialize(string: String?): T {
-        val jsonAdapter = moshi.adapter(type)
+        val jsonAdapter = moshi.adapter<T>(type)
         return string?.let { jsonAdapter.fromJson(it) } ?: defaultValue
     }
 

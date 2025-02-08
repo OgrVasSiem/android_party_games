@@ -1,7 +1,11 @@
 package com.ogrvassiem.partygames.di
 
 import android.content.Context
+import com.ogrvassiem.partygames.data.dataStore.ComplexityDataStore
+import com.ogrvassiem.partygames.data.dataStore.PenaltyForSkippingDataStore
+import com.ogrvassiem.partygames.data.dataStore.RoundTimeDataStore
 import com.ogrvassiem.partygames.data.dataStore.ShowOnboardingDataStore
+import com.ogrvassiem.partygames.data.dataStore.VictoryPointsDataStore
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -20,6 +24,54 @@ object DataStoreModule {
         moshi: Moshi
     ): ShowOnboardingDataStore {
         return ShowOnboardingDataStore(
+            context = context,
+            moshi = moshi
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun provideComplexityDataStore(
+        @ApplicationContext context: Context,
+        moshi: Moshi
+    ): ComplexityDataStore {
+        return ComplexityDataStore(
+            context = context,
+            moshi = moshi
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun provideVictoryPointsDataStore(
+        @ApplicationContext context: Context,
+        moshi: Moshi
+    ): VictoryPointsDataStore {
+        return VictoryPointsDataStore(
+            context = context,
+            moshi = moshi
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun provideRoundTimeDataStore(
+        @ApplicationContext context: Context,
+        moshi: Moshi
+    ): RoundTimeDataStore {
+        return RoundTimeDataStore(
+            context = context,
+            moshi = moshi
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun providePenaltyForSkippingDataStore(
+        @ApplicationContext context: Context,
+        moshi: Moshi
+    ): PenaltyForSkippingDataStore {
+        return PenaltyForSkippingDataStore(
             context = context,
             moshi = moshi
         )

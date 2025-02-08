@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ogrvassiem.partygames.aplication.query.core.QueryDispatcher
 import com.ogrvassiem.partygames.aplication.query.operations.GetShowOnboardingQuery
+import com.ogrvassiem.partygames.ui.destinations.MainSectionScreenDestination
+import com.ogrvassiem.partygames.ui.destinations.OnboardingScreenDestination
 import com.ramcosta.composedestinations.spec.Route
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.async

@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">PartyGames</string>
+
+    <!-- onboarding screen -->
+    <string name="onboarding_text_description_1">Общайтесь с друзьями и угадывайте слова быстрее всех!</string>
+    <string name="onboarding_text_description_2">Угадывайте слова, используя креативные объяснения и яркие ассоциации!</string>    <string name="onboarding_text_description_3">Миллионы людей по всему миру уже весело проводят время с Alias!</string>
+    <string name="onboarding_small_text_description_1">Развивайте коммуникацию, логику и получайте море удовольствия от игры!</string>
+    <string name="onboarding_small_text_description_2">Alias готов подарить вам незабываемые моменты с друзьями</string>
+    <string name="onboarding_small_text_description_3">Попробуйте и вы!</string>
+    <string name="onboarding_button_text_1">Отлично</string>
+    <string name="onboarding_button_text_2">Хорошо</string>
+    <string name="onboarding_button_text_3">Продолжить</string>
+
+    <!-- main screen -->
+    <string name="in_game">К игре</string>
+
+    <!-- game settings screen -->
+    <string name="easy">легкие</string>
+    <string name="medium">средние</string>
+    <string name="high">сложные</string>
+    <string name="choice_complexity">Выберите сложность:</string>
+    <string name="choice_time">Выберите время раунда:</string>
+    <string name="choice_victory_points">Выберите количество очков для победы:</string>
+    <string name="penalty_for_skipping">Отнимать очки за пропуск?</string>
+
+
 </resources>

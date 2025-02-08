@@ -1,6 +1,6 @@
 package com.ogrvassiem.partygames.aplication.query.core
 
-import com.foresko.gptChat.aplication.utils.network.NetworkStatusTracker
+import com.ogrvassiem.partygames.aplication.utils.network.NetworkStatusTracker
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flatMapLatest
